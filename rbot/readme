@@ -1,0 +1,16 @@
+11/19/2011 4:23:18 rbot is a port of my kbot to ruby the original was written in perl
+
+11/19/2011 4:29:11 
+kbot was useful sure but it had some flaws like for instance the code was messy
+rbot is much much more stable and more clean that kbot is.
+rbot has 8 commands they are as follows
+!op: usage !op name or !op . to refer to yourself
+!dop: usage !dop name or !dop . to refer to yourself
+!hop: usage !hop name
+!dhop: usage !dhop name
+!help: displays list of commands
+!log: usage !log sometext
+!join: usage !join #chan
+!leave: usage !leave #chan
+!say: usage !say sometext
+
