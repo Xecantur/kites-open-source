@@ -1,0 +1,34 @@
+##############################################
+Aleph One's Classic Buffer Overflow
+Code: Aleph One
+Phrack Issue 49(I think)
+**********************************************
+Acidfrost's Tiny exploit compile script
+Code: Acidfrost
+[SYNTAX]: ./exploitcc code.c programname
+Desc:	A Tiny compile script that passes necessary requirements to gcc in order to set the executable with stack permissions /
+-fno-stack-protector -D_FORTIFY_SOURCE=0 -z execstack, it also compiles both the exploitable version and a debug version(the exploitable version also has -g, /
+the debug version is just -g), the debug version on normal machines should return with a stack smashing /
+ detected message and then [0xSOMEADDRESSHERE] anyhow its not necessary for this particular exploit as its / 
+ self contained however this feature allows you to find the address where your program returns which you can then /
+use to help you find the address of your code or nopsled.
+##############################################
+
+
+Instructions:
+
+./exploitcc overflow1.c aleph
+
+sysctl -w kernel.randomize_va_space=0 # for ubuntu other distros may have another stack protection method (Tested on Ubuntu 10.04/Ubuntu 10.10)
+
+./aleph
+
+the you get a shell note its not a root shell its just a regular shell however you can get a euid shell(Effective Root shell) if you do this
+
+su
+chown 0:0 aleph
+chmod 4755 aleph
+exit
+./aleph
+
+

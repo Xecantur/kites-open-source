@@ -4,9 +4,19 @@ use Net::FTP;
 use Term::ReadKey;
 use Term::ANSIColor;
 
+if($ARGV[0] eq '-h' or $ARGV[0] eq '--help'){
+print "nettp [HOSTNAME]  [OPTIONS..]\n";
+die "\n";
+}
+
 my $ftp = Net::FTP->new($ARGV[0],Debug => 0)
 or die "Can\'t Connect either because you didn\'t specify a valid address or the host is currently down.\n";
 print color 'bold white';
+if($ARGV[1] eq "-l"){
+$ftp->login($ARGV[2],$ARGV[3]) 
+or die "Couldn't login ( Wrong Password Maybe? )\n" ;
+}
+else{
 print "Login to $ARGV[0]\n";
 print "User: ";
 chomp(my $tone = <STDIN>);
@@ -17,6 +27,7 @@ ReadMode 0;
 print "\n";
 $ftp->login($tone,$ttwo)
 or die "Can\'t login\n";
+}
 my $input;
 my $quit = 0;
 while ($quit != 10){
@@ -45,8 +56,11 @@ while ($quit != 10){
 		print "putr: put localfile  remotefile\n";
 		print "help: this help\n";
 		print "quit: quit nettp\n";
+		print "binary: switch to binary transfer mode\n";
+		print "ascii: switch to ascii transfer mode\n";
 		print color 'reset';
 	}
+	
 	elsif($input =~ /^putr(\s+(.*)\s+(.*))$/){
 		print "Putting $2 ...\n";
 		print "at $3 ...\n";
@@ -55,6 +69,14 @@ while ($quit != 10){
 	elsif($input =~ /^exit$/i){
 		print "Quitting...\n";
 		$quit = 10;
+	}
+	elsif($input =~ /^ascii$/){
+		print "Going to ascii transfer mode...\n";
+		$ftp->ascii();
+	}
+	elsif($input =~ /^binary$/){
+		print "Going to binary transfer mode...\n";
+		$ftp->binary();
 	}	
 	elsif($input =~ /^put(\s+(.*))$/ ){
 		print "Putting .. $2 on Server $ARGV[0]\n";
