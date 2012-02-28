@@ -1,0 +1,53 @@
+###############################################################################
+Purpose of this file:
+	
+The Purpose of this file is to help define the directory structure I use,
+It goes like this as shown by the tree:
+
+Language__
+	 |
+	 |__Library or Modules used
+	    |
+	    |__Project Name
+	       
+
+For C/C++ based projects:
+
+	Library Name__
+		     |
+		     |__includes // if it depends on any of my Headers
+		     |
+		     |__Docs // if I've made any DOES NOT COUNT README's
+
+
+For Ruby based Projects:
+
+	Module  Name__
+		     |
+		     |__Libs // if it depends on any of my Modules
+		     |
+		     |__ProjectName
+		       |
+		       |__Docs // if I've made any DOES NOT COUNT README's
+
+
+For Perl based Projects:
+
+	Module Name__
+		    |
+		    |__Modules // if it depends on any of my Modules
+		    |
+		    |__Project Name
+		       |
+		       |__Docs // if I've made any DOES NOT COUNT README's
+
+
+For Python based projects:
+
+	Module Name__
+		    |
+		    |__Modules // if it depends on any of my Modules
+		    |
+		    |__Project Name
+		       |
+		       |__Docs // if I've made any DOES NOT COUNT README's

@@ -1,0 +1,20 @@
+<resources>
+<sprite
+	name="s_one"
+	description=""
+	pack_texture="no"
+	base_angle="0"
+	id="001">
+	<image
+		file="s_one.png"
+		start_index="0"
+		skip_index="0"
+		leading_zeroes="" 
+	/>
+	<color red="1.0,0.0,0.2,1.0" />
+	<image 
+	file="s_one_2.png"
+		
+	/>
+</sprite>
+</resources>

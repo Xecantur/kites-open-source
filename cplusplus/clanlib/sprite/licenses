@@ -1,0 +1,5 @@
+The core code is based off of the clanlib display example, thus it is subject to whatever licenses they have decided to use, the images in the res folder were created in gimp by me(MastodonHQ) the xml file I'll just go ahead an attribute it to clanlib's licenses, I wrote the sprite code and movement however.
+
+I would list the licenses here but I'm too lazy just assume that everything that i haven't mentioned is under clanlibs license of choice.
+
+oh and the makefile is mine

@@ -1,0 +1,6 @@
+##########################################################################
+File: ktime.rb
+Author: MastodonHQ
+License: GPLV2 see google for details
+Description: A formatted time function for use with logging
+##########################################################################

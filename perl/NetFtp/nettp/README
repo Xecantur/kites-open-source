@@ -1,0 +1,17 @@
+nettp is a simple ftp client written in perl
+
+DEPENDS ON Term::ReadKey, Term::ANSIColor,Net::Ftp
+syntax
+./nettp ftp.somesite.com
+
+type help for a list of implemented commands
+
+getr and putr are in the format of
+
+getr remotefile localfile
+
+and
+
+putr localfile remotefile
+
+where remotefile is the server's end and localfile is the clients end
