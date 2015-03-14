@@ -2,8 +2,8 @@
 require 'cinch'
 require '../libs/ktime.rb'
 
-oplist = ['0::ffff:74.248.215.158','0::ffff:127.0.0.1','adsl-74-248-215-158.tys.bellsouth.net','74.208.67.72','c-69-249-96-237.hsd1.pa.comcast.net','adsl-108-194-110-194.dsl.rcsntx.sbcglobal.net','98.65.197.33','xp'];
-hoplist = ['articbreeze.net','adsl-108-194-110-194.dsl.rcsntx.sbcglobal.net','xp']
+oplist = ['host_goes_here'];
+hoplist = ['host_goes_here_too']
 chaway = "01"
 awaymsg = "Kite is active"
 bot = Cinch::Bot.new do
